@@ -11,7 +11,7 @@ $("#send-form").click((event) => {
     click: deleteTask,
   });
   const newTask = $("<li>", {
-    text: `taskValue.toString()`,
+    text: taskValue.toString(),
     class: "task",
     click: complete,
     "data-completed": "false",
