@@ -18,6 +18,7 @@ $("#send-form").click((event) => {
   });
 
   $(newTask).append(buttonElement);
+  $("#task-input").val("");
 
   $("#tasks-list").append(newTask);
 
