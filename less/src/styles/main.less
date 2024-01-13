@@ -1,0 +1,120 @@
+@import "mapas.less";
+@import "variaveis.less";
+@breakpointMobile: ~"(max-width:767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width:1023px)";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #colors[background-color];
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  @media @breakpointTablet {
+    max-width: @width-smaller;
+  }
+  @media @breakpointMobile {
+    max-width: @width-smaller;
+  }
+}
+
+header {
+  background-color: #colors[header-background-color];
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .menu {
+    display: flex;
+
+    li {
+      font-weight: bold;
+      margin-left: 1.5rem;
+      a {
+        color: #colors[text-color];
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  width: 100%;
+  @media @breakpointMobile {
+    display: block;
+  }
+  @media @breakpointTablet {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+
+.product-item {
+  @media @breakpointMobile {
+    margin-bottom: 2rem;
+  }
+  img {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .product-button {
+    display: block;
+    background-color: #colors[button-color];
+    color: #colors[text-color];
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #colors[button-color-hover];
+    }
+  }
+}
+
+section {
+  padding: 3.5rem 0;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 5vh;
+  background-color: #colors[header-background-color];
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+
+    a:hover {
+      transform: scale(1.1);
+    }
+  }
+}
