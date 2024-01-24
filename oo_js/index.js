@@ -71,4 +71,4 @@ bicicleta1.pedalarRapido();
 moto1.acelerar();
 moto1.ligar();
 
-console.log(carro1, bicicleta1, moto1);
+console.log(carro1, oi, bicicleta1, moto1);
